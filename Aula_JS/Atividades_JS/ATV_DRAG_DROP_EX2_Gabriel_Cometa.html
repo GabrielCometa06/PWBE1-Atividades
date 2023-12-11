@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+          width: 200px;
+          height: 200px;
+          padding: 10px;
+          border: 1px solid #aaaaaa;
+          background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMtBFY4VFNuk9y7KiEnZN5Qn6Zlj8fTgvhN5MapsEAE_GM_xSC4beeQUs-Df-yiLhdcA&usqp=CAU);
+        }
+
+        #div2 {
+          width: 200px;
+          height: 200px;
+          padding: 10px;
+          border: 1px solid #aaaaaa;
+          background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNMtBFY4VFNuk9y7KiEnZN5Qn6Zlj8fTgvhN5MapsEAE_GM_xSC4beeQUs-Df-yiLhdcA&usqp=CAU);
+        }
+        </style>
+
+</head>
+<body>
+    
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {  //drag = o que segue  ponteiro/ arrastar
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) { // drop = soltar
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
+        </head>
+        <body>
+        
+        <p>Arraste para cá!!</p>
+        
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <!--ondrop = ocorre quando o elementoarrastado sobre o destino
+        ondragover = ocorre o elemento sobre o alvo gota-->
+        <br>
+        <img id="drag1" src="IMG/presunto.jpg" draggable="true" ondragstart="drag(event)" width="100" height="100">
+        <img id="drag2" src="IMG/13691.jpg" draggable="true" ondragstart="drag(event)" width="100" height="100">
+        <img id="drag3" src="IMG/mortadela-ceratti-fatiado-kg_80700.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
+        <img id="drag4" src="IMG/8905.jpg"true" ondragstart="drag(event)" width="100" height="100">
+        <!--segue o ponteiro do mouse durante sobreposição-->
+           
+
+</body> 
+</html>

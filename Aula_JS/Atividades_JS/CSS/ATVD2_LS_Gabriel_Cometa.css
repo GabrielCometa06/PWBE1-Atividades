@@ -1,0 +1,43 @@
+body {
+    border: 10px rgb(211, 211, 211);
+    height: 800px;
+    background: linear-gradient(gray 40%, white 80%);
+    width: 100%;
+  }
+
+.test{
+    display: flex;
+    flex-direction: column;
+    right: 50%;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 0;
+    height: 20px;
+    gap: 5px;
+    box-shadow: 2px 2px 2px 1px rgb(0, 0, 0);  
+    width: 600px;
+    margin-left: 450px;      
+}
+
+.barra{
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    background-color: gray;
+    color: aliceblue;
+}

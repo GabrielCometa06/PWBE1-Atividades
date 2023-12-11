@@ -1,0 +1,19 @@
+#menuButton[aria-expanded = "true"]::after{
+    content: "+"; 
+}
+
+#menuButton[aria-expanded = "false"]::after{
+    content: "-"; 
+}
+
+#menu[aria-hidden = "true"]{
+    display: none;
+}
+
+#menu[aria-hidden = "false"]{
+    display: block;
+}
+
+[aria-label]{
+    border: 2px solid blue;
+}

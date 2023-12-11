@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div1 {
+          width: 30px;
+          height: 200px;
+          padding: 10px;
+          border: 1px solid #aaaaaa;
+          background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ38f1AoJkpWcofjP13lvLQdNBrHJGH0hj-2w&usqp=CAU);
+        }
+        </style>
+
+</head>
+<body>
+    
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {  //drag = o que segue  ponteiro/ arrastar
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) { // drop = soltar
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
+        </head>
+        <body>
+        
+        <p>Arraste para cá!!</p>
+        
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> <!--ondrop = ocorre quando o elementoarrastado sobre o destino
+        ondragover = ocorre o elemento sobre o alvo gota-->
+        <br>
+        <img id="drag1" src="IMG/dinheiro-web-story-scaled.jpg" draggable="true" ondragstart="drag(event)" width="300" height="200"><!--segue o ponteiro do mouse durante sobreposição-->
+           
+
+</body>
+</html>
